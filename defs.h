@@ -91,6 +91,7 @@ typedef struct {
 /* MACROS */
 
 #define FR2SQ(f, r) ( (21 + (f) ) + ( (r) * 10 ) )
+#define SQ64(sq120) Sq120ToSq64[sq120]
 
 /* GLOBALS */
 
@@ -99,6 +100,10 @@ extern int Sq64ToSq120[64];
 
 /* FUNCTIONS */
 
+// init.c
 extern void AllInit();
+
+// bitboards.c
+extern void PrintBitBoard(U64 bb);
 
 #endif
