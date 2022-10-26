@@ -20,5 +20,15 @@ int main() {
 
     AllInit();
 
+    U64 playBitBoard = 0ULL;
+
+    playBitBoard |= (1ULL << SQ64(D2));
+    playBitBoard |= (1ULL << SQ64(G2));
+    playBitBoard |= (1ULL << SQ64(G4));
+
+    printf("\n");
+    PrintBitBoard(playBitBoard);
+    POP(playBitBoard);
+
     return 0;
 }
